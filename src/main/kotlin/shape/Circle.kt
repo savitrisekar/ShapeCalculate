@@ -3,6 +3,7 @@ package shape
 class Circle(
     private val radius: Double
 ) : Shape("Circular") {
+
     override fun calculateArea(): Double {
         return 3.14 * radius * radius
     }

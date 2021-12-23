@@ -1,12 +1,16 @@
 package shape
 
-class Star(private val row: Int) {
+class Star(private val star: Int) {
     fun printStar() {
-        for (i in 1..row) {
-            for (j in 1..i) {
-                print("*")
+        if (star <= 20) {
+            for (i in 1..star) {
+                for (j in 1..i) {
+                    print("*")
+                }
+                println()
             }
-            println()
+        } else {
+            println("max stars you can input 20")
         }
     }
 }

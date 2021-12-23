@@ -92,7 +92,7 @@ class App {
     }
 
     private fun openStar() {
-        println("Enter rows : ")
+        println("Enter total star (max stars : 20) : ")
         val row = getValueFromUser()
 
         val star = Star(row.roundToInt())
