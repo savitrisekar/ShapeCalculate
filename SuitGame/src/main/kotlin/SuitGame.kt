@@ -1,4 +1,6 @@
-import java.lang.NumberFormatException
+import players.PlayerA
+import players.PlayerB
+import rules.SuitRules
 import kotlin.system.exitProcess
 
 class SuitGame {
@@ -54,21 +56,23 @@ class SuitGame {
             ============================
         """.trimIndent()
         )
-        println("Player A Choose : ")
-        playerA = getValueFromUser()
-        println("Player B Choose : ")
-        playerB = getValueFromUser()
+        inputPlayerA()
+        inputPlayerB()
         println("============================")
         println("Result : ")
         gameResult()
     }
 
-    private fun getValueFromUser(): String {
-        return try {
-            readLine().toString()
-        } catch (e: NumberFormatException) {
-            ""
-        }
+    private fun inputPlayerA() {
+        val player = PlayerA()
+        player.printPlayer()
+        playerA = player.getValueFromUser()
+    }
+
+    private fun inputPlayerB() {
+        val player = PlayerB()
+        player.printPlayer()
+        playerB = player.getValueFromUser()
     }
 
     private fun gameResult() {

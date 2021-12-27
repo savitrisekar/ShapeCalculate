@@ -1,8 +1,13 @@
+package rules
+
 class SuitRules {
 
     fun getRules(playerA: String, playerB: String) {
 
-        if (playerA == playerB) {
+        if (playerA == "rock" && playerB == "rock" ||
+            playerA == "paper" && playerB == "paper" ||
+            playerA == "scissor" && playerB == "scissor"
+        ) {
             println("It’s a draw")
         } else if (playerA == "rock" && playerB == "scissor" ||
             playerA == "paper" && playerB == "rock" ||
